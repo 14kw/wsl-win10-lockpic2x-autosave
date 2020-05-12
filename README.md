@@ -25,13 +25,14 @@ sudo ldconfig
 
 waifu2x uses CPU because GPU is not visible to WSL.
 
-## cron
+## Windows Time Scheduler
 
 The lock screen image is downloaded at startup. Therefore, set it to the time you are running.
 
 
-```
-0 12 * * * /bin/bash /opt/wsl-win10-lockpic2x-autosave/autosave.sh >/dev/null 2>&1
+```run.bat
+@echo off
+wsl /bin/bash /home/username/win10-lockpic-autosave/autosave.sh
 ```
 
 ## 参考

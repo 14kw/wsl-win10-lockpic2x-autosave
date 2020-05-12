@@ -4,7 +4,7 @@ SAVEDIR="$HOMEDIR/Pictures/Win10LockPic"
 
 mkdir -p $SAVEDIR
 cd $HOMEDIR/AppData/Local/Packages/Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy/LocalState/Assets
-find . -mtime -1 -type f -exec cp {} $SAVEDIR \;
+find . -mtime 1 -type f -exec cp {} $SAVEDIR \;
 
 cd $SAVEDIR
 filelist=`find . -not -name '*jpg' -type f -printf "%f\n"`
